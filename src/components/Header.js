@@ -15,7 +15,7 @@ const Header = () => {
   const [showPopover, setShowPopover] = useState(false);
   const dispatch = useDispatch();
   const {user} = useSelector((state) => state.auth);
-  console.log("user", user);
+
   const handleLogout = () => {
     dispatch(logoutUser());
     setShowPopover(false);

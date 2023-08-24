@@ -35,8 +35,6 @@ function NewsDetails() {
   };
 
   const handleSubmit = async (values) => {
-    // Implement your save/update logic here
-    console.log(values);
     let obj = {
       title: values.title,
       content: values.content,
@@ -44,7 +42,7 @@ function NewsDetails() {
       date: moment(values.date).toISOString(),
       imagePaths: [image],
     };
-    console.log("Form data:", obj);
+
     await updateNews(oneNews?.uuid, obj).then((res) => {
       if (res.status === 200) {
         navigate("/news");

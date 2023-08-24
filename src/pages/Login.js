@@ -12,8 +12,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  //   const {access_token} = useSelector((state) => state.auth);
-  //   console.log("access_token", access_token);
   const dispatch = useDispatch();
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,9 +20,9 @@ const Login = () => {
       password: password,
     };
     const result = await dispatch(loginUser(loginData));
-    console.log("loginData", loginData);
+
     dispatch(loginUser(loginData));
-    console.log("result", result);
+
     if (result.status === 200) {
       navigate("/");
     }

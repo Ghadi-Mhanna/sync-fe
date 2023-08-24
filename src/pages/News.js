@@ -22,7 +22,7 @@ function News() {
   useEffect(() => {
     dispatch(fetchAllNews());
   }, [dispatch]);
-  console.log("news", news);
+
   return (
     <Container className='mt-5'>
       <div className='d-flex justify-content-between align-items-center mb-4'>

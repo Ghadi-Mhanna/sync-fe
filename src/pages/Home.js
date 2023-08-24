@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
-// import {fetchAllNews} from "./allNewsSlice"; // Import your fetchAllNews action
+
 import {Container, Row, Col, Card} from "react-bootstrap";
 import {fetchAllNews} from "../redux/newsSlice";
 import moment from "moment";
@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     dispatch(fetchAllNews());
   }, [dispatch]);
-  console.log("news", news);
+
   return (
     <Container className='mt-5'>
       <h2 className='text-center mb-4'>All News</h2>

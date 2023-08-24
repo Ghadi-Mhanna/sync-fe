@@ -32,7 +32,7 @@ function NewNews() {
       date: moment(values.date).toISOString(),
       imagePaths: [image],
     };
-    console.log("Form data:", obj);
+
     await addNews(obj).then((res) => {
       if (res.status === 200) {
         navigate("/news");
@@ -44,7 +44,7 @@ function NewNews() {
 
   const handleImageChange = (e, setFieldValue) => {
     const selectedImage = e.target.files[0];
-    // Perform image upload or processing as needed
+
     setImage(URL.createObjectURL(selectedImage));
     setFieldValue("image", selectedImage);
   };
