@@ -4,7 +4,7 @@ import {Button, Container, Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {fetchAllUsers} from "../redux/usersSlice";
 import {deleteUser} from "../config/api";
-
+import "../css/Tables.css";
 function Users() {
   const dispatch = useDispatch();
   const {users} = useSelector((state) => state.users);
@@ -30,7 +30,7 @@ function Users() {
           Add New User
         </Link>
       </div>
-      <Table responsive striped bordered hover>
+      <Table responsive striped bordered hover className='custom-table'>
         <thead>
           <tr>
             <th>User Name</th>

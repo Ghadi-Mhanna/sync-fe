@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import {deleteCategory} from "../config/api";
 import {fetchAllCategories} from "../redux/categoriesSlice";
-
+import "../css/Tables.css";
 function Categories() {
   const dispatch = useDispatch();
   const {categories} = useSelector((state) => state.categories);
@@ -30,7 +30,7 @@ function Categories() {
           Add New Category
         </Link>
       </div>
-      <Table striped bordered hover responsive>
+      <Table striped bordered hover responsive className='custom-table'>
         <thead>
           <tr>
             <th>ID</th>

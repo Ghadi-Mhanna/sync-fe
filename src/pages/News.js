@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {deleteNews} from "../config/api";
 import {fetchAllNews} from "../redux/newsSlice";
 import moment from "moment";
-
+import "../css/Tables.css";
 function News() {
   const dispatch = useDispatch();
   const {news} = useSelector((state) => state.news);
@@ -31,7 +31,7 @@ function News() {
           Add New News
         </Link>
       </div>
-      <Table responsive striped bordered hover>
+      <Table responsive striped bordered hover className='custom-table'>
         <thead>
           <tr>
             <th>Title</th>
